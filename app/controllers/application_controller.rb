@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def test
     render html: "test"
   end
+
+  def test2
+    render html: "test 2"
+  end
+
+  def about
+    
+  end
 end
