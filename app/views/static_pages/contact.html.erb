@@ -1,4 +1,7 @@
 <% provide(:title, "Kontak" ) %>
-<title> kontakt </title>
-<h1> Sample app kontakt </h1>
+<title> <%= yield(:title) %> </title>
+<h1> <%= yield(:title) %> </h1>
+
+<h2> <%= full_title(yield(:title)) %> </h2>
 <p> Some content </p>
+<p>aass</p>
