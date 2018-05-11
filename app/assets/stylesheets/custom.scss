@@ -50,18 +50,17 @@ p {
 /* header */
 
 #logo {
-float: left;
-margin-right: 10px;
-font-size: 1.7em;
-color: #fff;
-text-transform: uppercase;
-letter-spacing: -1px;
-padding-top: 9px;
-font-weight: bold;
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
 }
 
 #logo:hover {
-
   color: red;
   text-decoration: none;
 }
@@ -71,4 +70,35 @@ img:hover {
   border: 5px dotted black;
   //border-style: dotted;
 
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
