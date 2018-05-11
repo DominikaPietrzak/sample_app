@@ -18,5 +18,7 @@ class ApplicationController < ActionController::Base
     puts "kot"
   end
 
+  def contact
+  end
 
 end
