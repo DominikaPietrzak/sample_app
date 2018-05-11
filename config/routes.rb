@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'test2' => 'application#test2'
   get 'static_pages/about'
   root 'static_pages#home'
+  #path_names {new: ''}
 end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 #get '/helf', to: 'static_pages#help', as: 'helf'
