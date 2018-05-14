@@ -11,4 +11,11 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get contact_path
     assert_select "title", full_title("Kontakt")
   end
+  test "footer links" do
+    get root_path
+    assert_select "footer" do
+      assert_select "a[href=?]", signup_path
+    end
+  end
+
 end
