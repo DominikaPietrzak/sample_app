@@ -46,6 +46,16 @@ test "email must be unique" do
   assert_not duplicate_user.valid?
 end
 
-
+test "email should be downcase" do
+  emails = %w[email@email.com EMAIL@Email.com]
+  emails_down = %w[email@email.com email@email.com]
+  emails.each do |mail|
+    emails_down.each do |mail_down|
+      @user.email = mail.downcase
+      @user.save
+      assert_equal(mail_down, @user.email)
+    end
+  end
+end
 
 end
