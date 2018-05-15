@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
   get 'static_pages/home'
   get 'hello' =>'application#hello'
   get 'test'=>'application#test'
