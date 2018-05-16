@@ -1,0 +1,9 @@
+<%= @user.name %> <%= @user.email %>
+<p> Użytkownik został utworzony dnia </p>
+<%= @user.created_at.strftime('%F') %>
+<p> Użytkownik został updatowany </p>
+<%= @user.updated_at.strftime('%F') %>
+<p> Dziś jest </p>
+<% t = Time.now  %>
+
+<%= t.strftime('%F') %>
