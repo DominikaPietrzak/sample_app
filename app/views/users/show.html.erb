@@ -1,9 +1,23 @@
-<%= @user.name %> <%= @user.email %>
-<p> Użytkownik został utworzony dnia </p>
-<%= @user.created_at.strftime('%F') %>
-<p> Użytkownik został updatowany </p>
-<%= @user.updated_at.strftime('%F') %>
-<p> Dziś jest </p>
-<% t = Time.now  %>
+<% provide(:title, @user.name) %>
 
-<%= t.strftime('%F') %>
+<div class ="row">
+  <aside class = "col-md-4">
+    <section class = "user_info" >
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <h1>
+        <%= @user.name %></br>
+        <%= @user.email %>
+      </h1>
+      <p> Użytkownik został utworzony dnia </p>
+        <%= @user.created_at.strftime('%F') %>
+      <p> Użytkownik został updatowany </p>
+        <%= @user.updated_at.strftime('%F') %>
+      <p> Dziś jest </p>
+        <% t = Time.now  %>
+        <%= t.strftime('%F') %>
+    </section>
+  </aside>
+</div>
