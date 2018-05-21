@@ -27,11 +27,13 @@ class User < ApplicationRecord
     update_attribute(:remember_digset, User.digest(remember_token))
   end
 
-  def authenticated?
+  def authenticated?(remember_token)
+    return false if remember_digset.nil?
       BCrypt::Password.new(remember_digset).is_password?(remember_token)
   end
 
   def forget
+    #dlaczego symbol został tutaj użyty ?
     update_attribute(:remember_digset, nil)
   end
 
