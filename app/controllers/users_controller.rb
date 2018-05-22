@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attribute(user_params)
+    if @user.update_attributes(user_params)
 
     else
       render 'edit'
@@ -36,5 +36,5 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
-  
+
 end
