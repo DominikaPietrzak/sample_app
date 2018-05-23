@@ -16,7 +16,7 @@ lana:
 
 malory:
   name: Malory Archer
-  email: hands@example.gov
+  email: boss@example.gov
   password_digest: <%= User.digest('password') %>
 
 <% 30.times do |n| %>
