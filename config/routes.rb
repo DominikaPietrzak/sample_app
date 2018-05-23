@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/signup',  to: 'users#new'
   post 'signup', to: 'users#create'
   resources :users
+  resources :account_activations, only: [:edit]
   #pod adresem /help będzie można wyświetlić views help z konrollera static_pages akcję help
   #path_names {new: ''}
 end
