@@ -1,0 +1,4 @@
+# encoding: utf-8
+Hi <%= @user.name %>
+Click on link below to acctivate
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
