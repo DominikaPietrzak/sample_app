@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-
+  default_url_options :host => "example.com"
   get 'static_pages/home'
   get 'hello' =>'application#hello'
   get 'test'=>'application#test'
