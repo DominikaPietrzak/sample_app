@@ -18,15 +18,15 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  private
+
   def correct_user
     @micropost = current_user.microposts.find_by(id: params[:id])
     redirect_to root_url if @micropost.nil?
   end
 
-  private
-
   def micropost_params
-    params.require(:micropost).permit(:content)
+    params.require(:micropost).permit(:content, :picture)
   end
 
 end
