@@ -13,9 +13,14 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/signup',  to: 'users#new'
   post 'signup', to: 'users#create'
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :account_activations, only: [:edit]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   #pod adresem /help będzie można wyświetlić views help z konrollera static_pages akcję help
   #path_names {new: ''}
 end
