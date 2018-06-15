@@ -1,0 +1,6 @@
+test
+<% @notes.each do |note| %>
+<%= note.text %>
+<%= link_to "delete", note, method: :delete, data: {confirm: "You sure?"} %>
+</br>
+<% end %>
